@@ -1,0 +1,14 @@
+<h2>Park Information</h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @park.park_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @park.park_description %>
+</p>
+
+<%= link_to 'Back', parks_path %>
+<%= link_to 'Edit', edit_park_path %>

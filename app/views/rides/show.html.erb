@@ -1,0 +1,14 @@
+<h2>Ride Information</h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ride.ride_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ride.ride_description %>
+</p>
+
+<%= link_to 'Back', rides_path %>
+<%= link_to 'Edit', edit_ride_path %>

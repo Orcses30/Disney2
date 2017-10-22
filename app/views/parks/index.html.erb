@@ -1,0 +1,24 @@
+<h1>List of Parks</h1>
+
+<table>
+  <tr>
+    <th>Park Name</th>
+    <th>Park Description</th>
+  </tr>
+
+  <% @parks.each do |park| %>
+    <tr>
+      <td><%= park.park_name %></td>
+      <td><%= park.park_description %></td>
+      <td><%= link_to 'View', park_path(park) %></td>
+      <td><%= link_to 'Edit', edit_park_path(park) %></td>
+      <td><%= link_to 'Delete', park_path(park),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Create Park', new_park_path %>
+<br>
+<%= link_to 'Back', root_path %>

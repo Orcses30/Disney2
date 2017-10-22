@@ -1,0 +1,24 @@
+<h1>List of Rides</h1>
+
+<table>
+  <tr>
+    <th>Ride Name</th>
+    <th>Ride Description</th>
+  </tr>
+
+  <% @rides.each do |ride| %>
+    <tr>
+      <td><%= ride.ride_name %></td>
+      <td><%= ride.ride_description %></td>
+      <td><%= link_to 'View', ride_path(ride) %></td>
+      <td><%= link_to 'Edit', edit_ride_path(ride) %></td>
+      <td><%= link_to 'Delete', ride_path(ride),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Create Rides', new_ride_path %>
+<br>
+<%= link_to 'Back', root_path %>

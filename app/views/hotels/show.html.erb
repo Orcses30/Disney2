@@ -1,0 +1,14 @@
+<h2>Hotel Information</h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hotel.hotel_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hotel.hotel_description %>
+</p>
+
+<%= link_to 'Back', hotels_path %>
+<%= link_to 'Edit', edit_hotel_path %>
