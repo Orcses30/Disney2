@@ -1,0 +1,36 @@
+<%= form_for @front_page do |f| %>
+
+  <% if @front_page.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@front_page.errors.count, "error") %>
+            kept this Disney frontpage from being saved:
+      </h2>
+      <ul>
+        <% @front_page.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :frontpage_name %><br>
+    <%= f.text_field :frontpage_name %>
+  </p>
+
+  <p>
+    <%= f.label :frontpage_description %><br>
+    <%= f.text_area :frontpage_description %>
+  </p>
+
+  <div class="field">
+    <%= f.label 'List' %><br>
+    <%= f.collection_select :frontpage_name, FrontPage.order(:frontpage_name), :id, :frontpage_name, include_blank: true %>
+  </div>
+
+  <p>
+    <%= f.submit %>
+  </P>
+
+<% end %>

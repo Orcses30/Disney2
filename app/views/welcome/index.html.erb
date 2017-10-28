@@ -1,4 +1,5 @@
 <h1>Welcome to Disney Destinations!</h1>
+
 <%= link_to 'Characters', controller: 'characters' %>
 <br>
 <%= link_to 'Hotels', controller: 'hotels' %>
@@ -8,3 +9,19 @@
 <%= link_to 'Restaurants', controller: 'restaurants' %>
 <br>
 <%= link_to 'Rides', controller: 'rides' %>
+<br>
+<%= link_to 'Front Page', controller: 'front_pages' %>
+
+<table>
+  <tr>
+    <th>Front Page Name</th>
+  </tr>
+
+  <% @front_pages.each do |f| %>
+    <tr>
+      <td><%= f.frontpage_name %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= render 'front_pages/form' %>

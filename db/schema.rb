@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171015183210) do
+ActiveRecord::Schema.define(version: 20171022185508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20171015183210) do
   create_table "characters", force: :cascade do |t|
     t.string   "character_name"
     t.text     "character_description"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "front_pages", force: :cascade do |t|
+    t.string   "frontpage_name"
+    t.text     "frontpage_description"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
   end
@@ -39,8 +46,11 @@ ActiveRecord::Schema.define(version: 20171015183210) do
   create_table "restaurants", force: :cascade do |t|
     t.string   "restaurant_name"
     t.text     "restaurant_description"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.index ["imageable_type", "imageable_id"], name: "index_restaurants_on_imageable_type_and_imageable_id", using: :btree
   end
 
   create_table "rides", force: :cascade do |t|
