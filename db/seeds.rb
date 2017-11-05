@@ -5,10 +5,3 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-FrontPage.destroy_all
-characters = FrontPage.create!(frontpage_name: "Characters")
-hotels = FrontPage.create!(frontpage_name: "Hotels")
-parks = FrontPage.create!(frontpage_name: "Parks")
-restaurants = FrontPage.create!(frontpage_name: "Restaurants")
-rides = FrontPage.create!(frontpage_name: "Rides")

@@ -1,0 +1,26 @@
+/*This is a comment!! */
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1d6ef2;
+}
+
+body {
+    //background-color: #dbdce0;
+    background-image: image-url("mario.jpg");
+    background-position: center top;
+}
+
+h1 {
+    color: #ad1cce;
+    text-align: center;
+}
+
+li {
+    float: left;
+}

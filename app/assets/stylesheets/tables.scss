@@ -1,0 +1,31 @@
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th {
+    height: 15px;
+    text-align: left;
+    vertical-align: bottom;
+    padding: 5px;
+    background-color: #e8b22c;
+    color: white;
+}
+
+td {
+  padding: 5px;
+  text-align: left;
+  //background-color: #6ccad1;
+}
+
+tr:nth-child(even) {
+  background-color: #6E9ACD;
+}
+
+tr:nth-child(odd) {
+  background-color: #90B2DA;
+}
+
+tr:hover {
+  background-color: #90D7DA;
+}

@@ -1,2 +1,0 @@
-class FrontPage < ApplicationRecord
-end

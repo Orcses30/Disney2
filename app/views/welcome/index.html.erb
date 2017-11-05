@@ -1,27 +1,16 @@
 <h1>Welcome to Disney Destinations!</h1>
 
-<%= link_to 'Characters', controller: 'characters' %>
-<br>
-<%= link_to 'Hotels', controller: 'hotels' %>
-<br>
-<%= link_to 'Parks', controller: 'parks' %>
-<br>
-<%= link_to 'Restaurants', controller: 'restaurants' %>
-<br>
-<%= link_to 'Rides', controller: 'rides' %>
-<br>
-<%= link_to 'Front Page', controller: 'front_pages' %>
-
-<table>
-  <tr>
-    <th>Front Page Name</th>
-  </tr>
-
-  <% @front_pages.each do |f| %>
-    <tr>
-      <td><%= f.frontpage_name %></td>
-    </tr>
-  <% end %>
-</table>
-
-<%= render 'front_pages/form' %>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Links</a>
+    <div class="dropdown-content">
+      <a href="http://localhost:3000/characters">Characters</a>
+      <a href="http://localhost:3000/hotels">Hotels</a>
+      <a href="http://localhost:3000/parks">Parks</a>
+      <a href="http://localhost:3000/restaurants">Restaurants</a>
+      <a href="http://localhost:3000/rides">Rides</a>
+    </div>
+  </li>
+</ul>
